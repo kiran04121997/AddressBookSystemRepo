@@ -14,10 +14,13 @@ namespace AddressBookSystemProject
                 //Showing Welcome Message On console.
                 Console.WriteLine("Welcome to Address Book Progam \n");
 
-                CreateAddressBookSystem addressBook = new CreateAddressBookSystem();
-                addressBook.AddContact();
-                Console.ReadLine();
             
+                Console.ReadLine();
+            //Showing Welcome Message On console.
+            Console.WriteLine("Welcome to Address Book Progam \n");
+            CreateAddressBookSystem createAddressBook = new CreateAddressBookSystem();
+            createAddressBook.ReadInput();
+            Console.ReadLine();
 
 
         }
