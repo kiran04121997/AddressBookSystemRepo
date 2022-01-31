@@ -10,17 +10,21 @@ namespace AddressBookSystemProject
     {
         static void Main(string[] args)
         {
-            //Main  Method / program Entry Point
-                //Showing Welcome Message On console.
-                Console.WriteLine("Welcome to Address Book Progam \n");
+            ///Main  Method / program Entry Point
 
-            
-                Console.ReadLine();
-            //Showing Welcome Message On console.
-            Console.WriteLine("Welcome to Address Book Progam \n");
-            CreateAddressBookSystem createAddressBook = new CreateAddressBookSystem();
-            createAddressBook.ReadInput();
-            Console.ReadLine();
+            {
+                //Main  Method / program Entry Point
+
+                {
+                    //Showing Welcome Message On console.
+                    Console.WriteLine("Welcome to Address Book Progam \n");
+                    CreateAddressBookSystem createAddressBook = new CreateAddressBookSystem();
+                    createAddressBook.ReadInput();
+                    Console.ReadLine();
+                }
+
+
+            }
 
 
         }
