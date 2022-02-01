@@ -60,6 +60,8 @@ namespace AddressBookSystemProject
         /// <param name="addressBookMain"></param>
         public static void AddDetails(AddressBookMain addressMain)
         {
+            Console.WriteLine("Enter unique Name to your AddressBook");
+            string adBkName = Console.ReadLine();
             Console.WriteLine("Enter first Name");
             string firstName = Console.ReadLine();
             Console.WriteLine("Enter Last Name");
@@ -77,7 +79,7 @@ namespace AddressBookSystemProject
             Console.WriteLine("Enter Email");
             string email = Console.ReadLine();
 
-            addressMain.AddContactDetails(firstName, lastName, address, city, state, zipCode, phoneNumber, email);
+            addressMain.AddContactDetails(adBkName, firstName, lastName, address, city, state, zipCode, phoneNumber, email);
         }
 
         //Method to Add Multiple Contact
