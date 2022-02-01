@@ -18,7 +18,7 @@ namespace AddressBookSystemProject
                 {
                     //Showing Welcome Message On console.
                     Console.WriteLine("Welcome to Address Book Progam \n");
-                    CreateAddressBookSystem createAddressBook = new CreateAddressBookSystem();
+                    CreateAddressBook createAddressBook = new CreateAddressBook();
                     createAddressBook.ReadInput();
                     Console.ReadLine();
                 }

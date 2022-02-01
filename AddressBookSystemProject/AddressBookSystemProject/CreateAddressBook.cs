@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AddressBookSystemProject
 {
-    internal class CreateAddressBookSystem
+    internal class CreateAddressBook
     {
         AddressBookMain addressMain = new AddressBookMain();
         //created List of class Type.
@@ -22,6 +22,7 @@ namespace AddressBookSystemProject
                 Console.WriteLine("2.Display");
                 Console.WriteLine("3.Edit Details");
                 Console.WriteLine("4.Delete Person");
+                Console.WriteLine("5.Add Multiple Person");
                 Console.WriteLine("0.Exit");
                 int choice = Convert.ToInt32(Console.ReadLine());
                 switch (choice)
@@ -41,6 +42,9 @@ namespace AddressBookSystemProject
                         Console.WriteLine("Enter the first name of person");
                         string dName = Console.ReadLine();
                         addressMain.DeleteContact(dName);
+                        break;
+                    case 5:
+                        AddMultiplePerson();
                         break;
                     case 0:
                         CONTINUE = false;
@@ -72,7 +76,20 @@ namespace AddressBookSystemProject
             long phoneNumber = Convert.ToInt64(Console.ReadLine());
             Console.WriteLine("Enter Email");
             string email = Console.ReadLine();
+
             addressMain.AddContactDetails(firstName, lastName, address, city, state, zipCode, phoneNumber, email);
+        }
+
+        //Method to Add Multiple Contact
+        public void AddMultiplePerson()
+        {
+            Console.WriteLine("How many contact,you want to Add");
+            int cNumber = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= cNumber; i++)
+            {
+                CreateAddressBook.AddDetails(addressMain);
+            }
+            Console.WriteLine("All Contacts Added successfully! \n");
         }
     }
 }
